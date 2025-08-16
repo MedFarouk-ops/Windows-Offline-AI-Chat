@@ -26,20 +26,18 @@
     <Grid Background="Transparent">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="280" MinWidth="100" />
-            <ColumnDefinition Width="1" />
             <!-- splitter -->
             <ColumnDefinition Width="*" MinWidth="100" />
-            <ColumnDefinition Width="5" />
+  
             <!-- splitter -->
-            <ColumnDefinition Width="*" MinWidth="100" />
+            <ColumnDefinition Width="Auto" MinWidth="100" />
         </Grid.ColumnDefinitions>
 
         <!-- Left: SettingsPage -->
         <local:SettingsPage Grid.Column="0" DataContext="{Binding SettingsVM}" Margin="0" />
-        <GridSplitter Grid.Column="1" Width="5" Background="LightGray" HorizontalAlignment="Left" VerticalAlignment="Stretch"
-                  ShowsPreview="True" ResizeBehavior="PreviousAndNext" />
+
         <!-- Middle: Existing UI -->
-        <StackPanel Grid.Column="2"
+        <StackPanel Grid.Column="1"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Top"
                 Width="Auto"
@@ -247,11 +245,10 @@
 
         </StackPanel>
 
-        <GridSplitter Grid.Column="3" Width="1" Background="LightGray" HorizontalAlignment="Right" VerticalAlignment="Stretch"
-                  ShowsPreview="True" ResizeBehavior="PreviousAndNext" />
+
 
         <!-- Right: Latest Opened Models -->
-        <StackPanel Grid.Column="4"
+        <StackPanel Grid.Column="2"
                 Margin="0"
                 Background="#FFF"
                 VerticalAlignment="Stretch"
