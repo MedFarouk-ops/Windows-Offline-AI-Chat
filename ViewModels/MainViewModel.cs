@@ -1,12 +1,12 @@
 ﻿using DevExpress.Mvvm;
-using OfflineCodingBot.Pages;
 using OfflineCodingBot.Services;
 using OfflineCodingBot.ViewModels;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media;
-
+using OfflineCodingBot.Services.LLMServices;
+using OfflineCodingBot.Views.PagesView;
 public class MainViewModel : ViewModelBase
 {
     public SidebarViewModel Sidebar { get; }

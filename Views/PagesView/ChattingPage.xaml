@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="OfflineCodingBot.Views.PagesView.ChattingPage"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:components="clr-namespace:OfflineCodingBot.Views.Components.ChatPageComponents"
+             xmlns:vm="clr-namespace:OfflineCodingBot.ViewModels"
+             >
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <components:SidebarView Grid.Column="0" DataContext="{Binding Sidebar}" />
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <components:ChatView Grid.Row="0" DataContext="{Binding Chat}" Margin="16"/>
+            <components:ChatInputView Height="auto" MaxHeight="300" Grid.Row="1" DataContext="{Binding Chat}" Margin="16,0,16,0"/>
+        </Grid>
+    </Grid>
+</UserControl>

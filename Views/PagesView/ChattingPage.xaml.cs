@@ -13,16 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OfflineCodingBot.Controls
+namespace OfflineCodingBot.Views.PagesView
 {
     /// <summary>
-    /// Logique d'interaction pour ChatMessageControl.xaml
+    /// Logique d'interaction pour ChattingPage.xaml
     /// </summary>
-    public partial class ChatMessageControl : UserControl
+    public partial class ChattingPage : UserControl
     {
-        public ChatMessageControl()
+        public ChattingPage()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }

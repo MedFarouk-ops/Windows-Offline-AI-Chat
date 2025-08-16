@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="OfflineCodingBot.Views.SidebarView"
+﻿<UserControl x:Class="OfflineCodingBot.Views.Components.ChatPageComponents.SidebarView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:conv="clr-namespace:OfflineCodingBot.Converters"

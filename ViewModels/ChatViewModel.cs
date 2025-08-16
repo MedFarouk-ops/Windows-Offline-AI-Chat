@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Media;
+using OfflineCodingBot.Services.LLMServices;
 
 public class ChatViewModel : ViewModelBase
 {

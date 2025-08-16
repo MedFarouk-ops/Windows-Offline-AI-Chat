@@ -1,7 +1,6 @@
-﻿<UserControl x:Class="OfflineCodingBot.Pages.LatestModelsPage"
+﻿<UserControl x:Class="OfflineCodingBot.Views.Components.HomePageComponents.LatestModelsPage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:OfflineCodingBot.Pages">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Grid Margin="10">
         <StackPanel>

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OfflineCodingBot.Pages
+namespace OfflineCodingBot.Views.Components.HomePageComponents
 {
     /// <summary>
     /// Logique d'interaction pour SettingsPage.xaml

@@ -1,13 +1,14 @@
-﻿using LLama;
-using LLama.Common;
+﻿using LLama.Common;
+using LLama.Sampling;
+using LLama;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Threading;
+using System.Text;
 using System.Threading.Tasks;
-using LLama.Sampling;
 
-namespace OfflineCodingBot.Services
+namespace OfflineCodingBot.Services.LLMServices
 {
     public class LocalLLMService : IDisposable
     {
@@ -117,5 +118,4 @@ namespace OfflineCodingBot.Services
             }
         }
     }
-
 }

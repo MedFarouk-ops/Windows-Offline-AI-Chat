@@ -7,6 +7,8 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using OfflineCodingBot.Services.DataServices;
+using OfflineCodingBot.Services.LLMServices;
 
 namespace OfflineCodingBot.ViewModels
 {

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OfflineCodingBot.Views
+namespace OfflineCodingBot.Views.Components.ChatPageComponents
 {
     /// <summary>
     /// Logique d'interaction pour ChatView.xaml
