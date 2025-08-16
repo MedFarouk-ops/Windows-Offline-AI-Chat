@@ -121,116 +121,130 @@
                            Foreground="#666666"
                            Margin="0,4,0,20" />
 
-                <!-- Model Container 1 -->
-                <Border Background="DarkGreen"
-                        BorderBrush="#DDD"
-                        BorderThickness="1"
-                        CornerRadius="6"
-                        Padding="15"
-                        Margin="0,0,0,15"
-                        SnapsToDevicePixels="True">
-
+                <!-- Meta LLama: Most Important Model -->
+                <Border Background="White"
+        BorderBrush="#2B2B2B"
+        BorderThickness="2"
+        CornerRadius="6"
+        Padding="15"
+        Margin="0,0,0,15"
+        SnapsToDevicePixels="True"
+        Effect="{DynamicResource DropShadowEffect}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="120" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Text="DeepSeek Model Q4_0"
-                                   VerticalAlignment="Center"
-                                   FontSize="12"
-                                   Foreground="White"
-                                   TextTrimming="CharacterEllipsis"
-                                   Margin="0,0,0,0" />
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <TextBlock Text="Meta LLama 3 8B Q3K L"
+                       FontSize="14"
+                       FontWeight="Bold"
+                       Foreground="#222222"
+                       TextTrimming="CharacterEllipsis" />
+                            <TextBlock Text="Size: 4.32 GB - Accuracy: 80%" 
+                       FontSize="12"
+                       Foreground="#555555"
+                       Margin="0,4,0,0"/>
+                        </StackPanel>
 
                         <Button Content="Download"
-                                Grid.Column="1"
-                                Width="100"
-                                Height="32"
-                                Background="#4CAF50"
-                                Foreground="White"
-                                FontWeight="SemiBold"
-                                BorderThickness="0"
-                                Cursor="Hand"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Click="DownloadDeepSeek_Click" />
+                Grid.Column="1"
+                Width="100"
+                Height="32"
+                Background="#4CAF50"
+                Foreground="White"
+                FontWeight="SemiBold"
+                BorderThickness="0"
+                Cursor="Hand"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Click="DownloadMetaLLama_Click" />
                     </Grid>
                 </Border>
 
-                <!-- Model Container 2 -->
-                <Border Background="LightGreen"
-                        BorderBrush="#DDD"
-                        BorderThickness="1"
-                        CornerRadius="6"
-                        Padding="15"
-                        Margin="0,0,0,15"
-                        SnapsToDevicePixels="True">
-
+                <!-- DeepSeek Model Q4_0 -->
+                <Border Background="White"
+        BorderBrush="#DDD"
+        BorderThickness="1"
+        CornerRadius="6"
+        Padding="15"
+        Margin="0,0,0,15"
+        SnapsToDevicePixels="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="120" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Text="Qwen3 1.7B Q8_0"
-                                   VerticalAlignment="Center"
-                                   FontSize="12"
-                                   Foreground="Black"
-                                   TextTrimming="CharacterEllipsis"
-                                   Margin="0,0,0,0" />
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <TextBlock Text="DeepSeek Model Q4_0"
+                       FontSize="12"
+                       FontWeight="SemiBold"
+                       Foreground="#222222"
+                       TextTrimming="CharacterEllipsis" />
+                            <TextBlock Text="Size: 0.99 GB - Accuracy: 55%" 
+                       FontSize="12"
+                       Foreground="#555555"
+                       Margin="0,4,0,0"/>
+                        </StackPanel>
 
                         <Button Content="Download"
-                                Grid.Column="1"
-                                Width="100"
-                                Height="32"
-                                Background="#4CAF50"
-                                Foreground="White"
-                                FontWeight="SemiBold"
-                                BorderThickness="0"
-                                Cursor="Hand"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Click="DownloadQueenSeek_Click" />
+                Grid.Column="1"
+                Width="100"
+                Height="32"
+                Background="#4CAF50"
+                Foreground="White"
+                FontWeight="SemiBold"
+                BorderThickness="0"
+                Cursor="Hand"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Click="DownloadDeepSeek_Click" />
                     </Grid>
                 </Border>
 
-                <!-- Model Container 2 -->
-                <Border Background="LightGreen"
-                       BorderBrush="#DDD"
-                       BorderThickness="1"
-                       CornerRadius="6"
-                       Padding="15"
-                       Margin="0,0,0,15"
-                       SnapsToDevicePixels="True">
-
+                <!-- Qwen3 1.7B Q8_0 -->
+                <Border Background="White"
+        BorderBrush="#DDD"
+        BorderThickness="1"
+        CornerRadius="6"
+        Padding="15"
+        Margin="0,0,0,15"
+        SnapsToDevicePixels="True">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="120" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Text="Meta LLama 3 8B Q3K L"
-                      VerticalAlignment="Center"
-                      FontSize="12"
-                      Foreground="Black"
-                      TextTrimming="CharacterEllipsis"
-                      Margin="0,0,0,0" />
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <TextBlock Text="Qwen3 1.7B Q8_0"
+                       FontSize="12"
+                       FontWeight="SemiBold"
+                       Foreground="#222222"
+                       TextTrimming="CharacterEllipsis" />
+                            <TextBlock Text="Size: 2.1 GB - Accuracy: 62%" 
+                       FontSize="12"
+                       Foreground="#555555"
+                       Margin="0,4,0,0"/>
+                        </StackPanel>
 
                         <Button Content="Download"
-                           Grid.Column="1"
-                           Width="100"
-                           Height="32"
-                           Background="#4CAF50"
-                           Foreground="White"
-                           FontWeight="SemiBold"
-                           BorderThickness="0"
-                           Cursor="Hand"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           Click="DownloadQueenSeek_Click" />
+                Grid.Column="1"
+                Width="100"
+                Height="32"
+                Background="#4CAF50"
+                Foreground="White"
+                FontWeight="SemiBold"
+                BorderThickness="0"
+                Cursor="Hand"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Click="DownloadQueenSeek_Click" />
                     </Grid>
                 </Border>
+
 
                 <!-- View More Models Link -->
                 <TextBlock Margin="0,20,0,0"
