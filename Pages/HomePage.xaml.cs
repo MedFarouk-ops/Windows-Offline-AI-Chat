@@ -69,5 +69,24 @@ namespace OfflineCodingBot.Pages
                 UseShellExecute = true
             });
         }
+
+        private void DownloadMetaLLama_Click(object sender, RoutedEventArgs e)
+        {
+            // Opens the official download URL in the default browser
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://huggingface.co/QuantFactory/Meta-Llama-3-8B-Instruct-GGUF/resolve/main/Meta-Llama-3-8B-Instruct.Q3_K_L.gguf?download=true",
+                UseShellExecute = true
+            });
+        }
+
+        private void OpenHuggingFaceLink(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://huggingface.co/models",
+                UseShellExecute = true
+            });
+        }
     }
 }

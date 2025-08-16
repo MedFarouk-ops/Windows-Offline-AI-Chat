@@ -197,6 +197,52 @@
                     </Grid>
                 </Border>
 
+                <!-- Model Container 2 -->
+                <Border Background="LightGreen"
+                       BorderBrush="#DDD"
+                       BorderThickness="1"
+                       CornerRadius="6"
+                       Padding="15"
+                       Margin="0,0,0,15"
+                       SnapsToDevicePixels="True">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="120" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="Meta LLama 3 8B Q3K L"
+                      VerticalAlignment="Center"
+                      FontSize="12"
+                      Foreground="Black"
+                      TextTrimming="CharacterEllipsis"
+                      Margin="0,0,0,0" />
+
+                        <Button Content="Download"
+                           Grid.Column="1"
+                           Width="100"
+                           Height="32"
+                           Background="#4CAF50"
+                           Foreground="White"
+                           FontWeight="SemiBold"
+                           BorderThickness="0"
+                           Cursor="Hand"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Click="DownloadQueenSeek_Click" />
+                    </Grid>
+                </Border>
+
+                <!-- View More Models Link -->
+                <TextBlock Margin="0,20,0,0"
+                           FontSize="12"
+                           Foreground="#1E90FF"
+                           TextDecorations="Underline"
+                           Cursor="Hand"
+                           Text="View more models on Hugging Face"
+                           MouseLeftButtonUp="OpenHuggingFaceLink" />
+                
             </StackPanel>
 
         </StackPanel>
