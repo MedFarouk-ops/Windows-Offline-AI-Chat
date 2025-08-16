@@ -10,6 +10,8 @@
                                   FalseBrush="#FFFFFF" />
         <conv:BoolToAlignmentConverter x:Key="BoolToAlign" />
 
+        <conv:MessageToFlowDocumentConverter x:Key="MessageToFlow" />
+        
         <LinearGradientBrush x:Key="UserBubbleGradient" StartPoint="0,0" EndPoint="0,1">
             <GradientStop Color="#66BB6A" Offset="0.0"/>
             <GradientStop Color="#388E3C" Offset="1.0"/>
@@ -280,14 +282,26 @@
                         <DataTemplate>
                             <Grid Margin="6">
                                 <Border 
-              Style="{StaticResource MessageBubbleStyle}"
-              HorizontalAlignment="{Binding IsUser, Converter={StaticResource BoolToAlign}}"
-              Background="{Binding IsUser, Converter={StaticResource BoolToBrush}}">
-                                    <TextBox Text="{Binding Text}" Style="{StaticResource ChatMessageTextStyle}" />
+                                Style="{StaticResource MessageBubbleStyle}"
+                                HorizontalAlignment="{Binding IsUser, Converter={StaticResource BoolToAlign}}"
+                                Background="{Binding IsUser, Converter={StaticResource BoolToBrush}}">
+
+                                    <!-- RichText bubble for mixed text/code -->
+                                    <FlowDocumentScrollViewer
+                                    Document="{Binding Text, Converter={StaticResource MessageToFlow}}"
+                                    VerticalScrollBarVisibility="Hidden"
+                                    HorizontalScrollBarVisibility="Hidden"
+                                    Background="Transparent"
+                                    IsToolBarVisible="False"
+                                    Padding="0"
+                                    FontSize="16"
+                                    FontFamily="{Binding DataContext.ChatFontFamily, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                    />
                                 </Border>
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
+
                 </ItemsControl>
             </ScrollViewer>
         </Border>
