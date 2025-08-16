@@ -296,7 +296,7 @@
                                     Padding="0"
                                     FontSize="16"
                                     FontFamily="{Binding DataContext.ChatFontFamily, RelativeSource={RelativeSource AncestorType=UserControl}}"
-                    />
+                                      />
                                 </Border>
                             </Grid>
                         </DataTemplate>
