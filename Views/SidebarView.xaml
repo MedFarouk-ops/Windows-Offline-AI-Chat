@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="OfflineCodingBot.Views.SidebarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:conv="clr-namespace:OfflineCodingBot.Converters"
+             MinWidth="220" Background="Transparent">
+    <UserControl.Resources>
+        <!-- Local converter so XAML can resolve it -->
+        <conv:BoolToBrushConverter x:Key="BoolToBrushConverter"
+                                  TrueBrush="#EAF3FF" 
+                                  FalseBrush="Transparent" />
+
+        <!-- Optional subtle shadow -->
+        <DropShadowEffect x:Key="Win11DropShadow" Color="Black" BlurRadius="10" ShadowDepth="2" Opacity="0.10"/>
+
+        <!-- Style for list items: nicer selection & hover -->
+        <Style x:Key="ConversationItemStyle" TargetType="ListBoxItem">
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="0,4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border x:Name="Bd"
+                                Background="Transparent"
+                                CornerRadius="8"
+                                Padding="10"
+                                SnapsToDevicePixels="True">
+                            <ContentPresenter />
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#EAF3FF"/>
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="#C7E0FF"/>
+                                <Setter TargetName="Bd" Property="BorderThickness" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#F5F9FF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Border Background="#F9F9F9"
+            CornerRadius="12"
+            Padding="12"
+            Margin="12"
+            BorderBrush="#E5E5E5"
+            BorderThickness="1"
+            Effect="{StaticResource Win11DropShadow}">
+        <StackPanel>
+            <TextBlock Text="Conversations"
+               FontSize="16"
+               FontWeight="SemiBold"
+               Foreground="#202020"
+               HorizontalAlignment="Center"
+               Margin="4,0,4,8"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0" HorizontalAlignment="center">
+                <Button Content="+" Width="80" Margin="0,0,10,0" Command="{Binding NewConversationCommand}" ToolTip="Add new conversation"/>
+                <!--<Button Content="✎" Width="60" Command="{Binding RenameConversationCommand}" ToolTip="Rename selected conversation"/>-->
+                <Button Content="🗑" Width="80" Command="{Binding DeleteConversationCommand}" ToolTip="Delete selected conversation"/>
+            </StackPanel>
+
+            <ListBox ItemsSource="{Binding Conversations}"
+             SelectedItem="{Binding SelectedConversation}"
+             BorderThickness="0"
+             ItemContainerStyle="{StaticResource ConversationItemStyle}"
+             Background="Transparent"
+             ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Title}"
+                           FontSize="14"
+                           Foreground="#1A1A1A"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+
+    </Border>
+</UserControl>

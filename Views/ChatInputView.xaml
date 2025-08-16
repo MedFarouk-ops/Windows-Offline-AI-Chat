@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="OfflineCodingBot.Views.ChatInputView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Border Background="White"
+            BorderThickness="1"
+            BorderBrush="Black"
+            Padding="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!-- Text input grows dynamically -->
+                <ColumnDefinition Width="*" />
+                <!-- Button fixed width -->
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Dynamic height text box -->
+            <TextBox x:Name="InputText"
+                     Text="{Binding CurrentMessage, UpdateSourceTrigger=PropertyChanged}"
+                     MinHeight="40"
+                     FontSize="14"
+                     VerticalContentAlignment="Center"
+                     Padding="10"
+                     Margin="0,0,8,0"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"
+                     BorderBrush="Black"
+                     BorderThickness="1"
+                     PreviewKeyDown="InputText_PreviewKeyDown" />
+
+
+            <!-- Send button always at the right -->
+            <Button Grid.Column="1"
+        MinWidth="100"
+        Height="{Binding ActualHeight, ElementName=InputText, Mode=OneWay}"
+        Background="#0078D4"
+        Foreground="White"
+        BorderThickness="1"
+        BorderBrush="Black"
+        FontWeight="SemiBold"
+        Cursor="Hand"
+        Padding="12,0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Content" Value="Send" />
+                        <Setter Property="Command" Value="{Binding SendMessageCommand}" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsGenerating}" Value="True">
+                                <Setter Property="Content" Value="Stop" />
+                                <Setter Property="Command" Value="{Binding StopCommand}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+        </Grid>
+    </Border>
+</UserControl>
