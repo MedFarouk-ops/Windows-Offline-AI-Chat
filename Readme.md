@@ -55,11 +55,8 @@ Feel free to fork this repo and submit a pull request.
 
 ### ⭐ If you like this project, give it a star on GitHub!
 
-
-
 ## ⬇️ Download for Windows  
 
 👉 [Download MFX AI Loader](https://med-farouk-khabir.netlify.app/sectionpages/desktopandaiprojects)
 
-Do you already have a GitHub Releases link / itch.io link / direct .zip link for the Windows build, or should I help you set one up (e.g., via GitHub Releases)?
-
+📺 [Watch MFX AI Loader Demo on YouTube](https://www.youtube.com/watch?v=hNWXM-h7xU8)
