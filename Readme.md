@@ -1,4 +1,4 @@
-# ⚡ MFX AI Loader  
+# ⚡ MFX AI Loader  Windows-Offline-AI-Chat
 
 **MFX AI Loader** is a modern **WPF Windows application** that lets you **load GGUF AI models** and **chat with them interactively**.  
 It includes simple **conversation management** so you can keep track of your chats easily.  
